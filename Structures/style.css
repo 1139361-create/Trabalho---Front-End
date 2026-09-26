@@ -1,0 +1,57 @@
+:root {
+  --cor-fundo: #000;
+  --cor-azul: blue;
+  --cor-azul-hover: #0060c7;
+  --cor-cinza-input: #141414;
+  --cor-cinza-borda: #8c8c8c;
+  --cor-texto-claro: #fff;
+  --cor-texto-cinza: #b3b3b3;
+  --fonte-principal: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --raio-borda: 4px;
+}
+
+.logo-text {
+  font-family: var(--fonte-principal);
+  font-size: 1.8rem;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -1px;
+  color: var(--cor-azul);
+  text-transform: uppercase;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-claro);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--cor-texto-claro);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.site-header {
+  padding: 1rem 1.5rem;
+}
+
+.logo img {
+  width: 110px;
+}

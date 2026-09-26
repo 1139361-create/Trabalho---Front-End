@@ -11,22 +11,24 @@
 <body>
  
   <header class="site-header">
-    <a href="index.html" class="logo">
-      <img src="images/netflix-logo.png" alt="Netflix">
+    <div>
+    <a href="index.html">
+     <span class="logo-text"> NETFLIX</span>
     </a>
+      </div>
   </header>
  
   <main class="login-main">
     <section class="login-box" aria-labelledby="login-title">
-      <h1 id="login-title">Informe seus dados para entrar</h1>
+      <h1 id="login-title">Informe seus dados para <br> entrar</h1>
+      <p> Ou crie uma conta.</p>
  
       <form class="login-form" id="loginForm" novalidate>
  
         <div class="form-group">
           <label for="email">Email ou número de celular</label>
-          <input
+          <input id="entrar"
             type="text"
-            id="email"
             name="email"
             required
             autocomplete="username"
@@ -34,7 +36,7 @@
           <span class="error-message" id="emailError" role="alert"></span>
         </div>
  
-        <div class="form-group">
+        <!--<div class="form-group">
           <label for="password">Senha</label>
           <input
             type="password"
@@ -46,22 +48,15 @@
           <button type="button" class="toggle-password" id="togglePassword" aria-label="Mostrar senha">
             Mostrar
           </button>
+
           <span class="error-message" id="passwordError" role="alert"></span>
-        </div>
+        </div> --->
  
         <button type="submit" class="btn-entrar">Continuar</button>
 
-        <div class="form-row">
-          <div class="remember-me">
-            <input type="checkbox" id="lembrete" name="lembrete">
-            <label for="lembrete">Lembre de mim</label>
-          </div>
           <a href="#" class="ajuda-link">Ajuda</a>
-        </div>
+        
  
-        <p class="signup-text">
-          <a href="#">Esqueceu o email ou o número de celular? <br> <a href="#">Saiba mais sobre como entrar</a>.
-        </p>
  
         <p class="recaptcha-text">
           Esta página é protegida pelo Google reCAPTCHA para confirmar que você não é um robô.
