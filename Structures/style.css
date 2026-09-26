@@ -91,7 +91,7 @@ a:hover {
 
 .form-group input {
   width: 100%;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: var(--cor-cinza-input);
   border: 1px solid var(--cor-cinza-input);
   border-radius: var(--raio-borda);
@@ -137,4 +137,48 @@ a:hover {
 
 .btn-entrar:hover {
   background-color: var(--cor-azul-hover);
+}
+
+.ajuda-link {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--cor-texto-cinza);
+  text-align: left;
+}
+
+.signup-text {
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  color: var(--cor-texto-cinza);
+}
+
+.signup-text a {
+  color: var(--cor-texto-claro);
+  font-weight: bold;
+}
+
+.recaptcha-text {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: var(--cor-texto-cinza);
+}
+
+.recaptcha-text a {
+  color: #0071eb;
+}
+
+@media (min-width: 768px) {
+  .site-header {
+    padding: 1.5rem 3rem;
+  }
+
+  .login-main {
+    padding: 3rem 5rem;
+    
+  }
+
+  #login-title {
+    font-size: 2.25rem;
+  }
 }
