@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Netflix - Faça login para entrar</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
- 
   <header class="site-header">
     <div>
     <a href="index.html">
@@ -17,52 +17,53 @@
     </a>
       </div>
   </header>
- 
   <main class="login-main">
     <section class="login-box" aria-labelledby="login-title">
       <h1 id="login-title">Informe seus dados para <br> entrar</h1>
-      <p> Ou crie uma conta.</p>
- 
+      <p id="subtitulo">Ou crie uma conta.</p>
       <form class="login-form" id="loginForm" novalidate>
- 
+        <div class="etapa-info" id="etapaInfo" hidden>
+          <span id="usuarioInfo"></span>
+          <button type="button" class="btn-link" id="btnAlterar">Alterar</button>
+        </div>
+
         <div class="form-group">
-          <label for="email">Email ou número de celular</label>
-          <input id="entrar"
+          <label for="campo" id="campoLabel">Email ou número de celular</label>
+          <input
+            id="campo"
             type="text"
-            name="email"
+            name="campo"
             required
             autocomplete="username"
+            autocapitalize="none"
+            autocorrect="off"
+            spellcheck="false"
+            aria-describedby="campoErro"
           >
-          <span class="error-message" id="emailError" role="alert"></span>
+          <span class="error-message" id="campoErro" role="alert"></span>
         </div>
- 
-        <!--<div class="form-group">
-          <label for="password">Senha</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            required
-            autocomplete="current-password"
-          >
-          <button type="button" class="toggle-password" id="togglePassword" aria-label="Mostrar senha">
-            Mostrar
-          </button>
-
-          <span class="error-message" id="passwordError" role="alert"></span>
-        </div> --->
- 
-        <button type="submit" class="btn-entrar">Continuar</button>
-
-          <a href="#" class="ajuda-link">Ajuda</a>
-        
- 
- 
+        <button type="submit" class="btn-entrar" id="btnContinuar">Continuar</button>
+        <a href="#" class="ajuda-link">Ajuda</a>
         <p class="recaptcha-text">
           Esta página é protegida pelo Google reCAPTCHA para confirmar que você não é um robô.
           <a href="#">Saiba mais.</a>
         </p>
-      </form>
+      </form> 
+      <div class="sucesso" id="sucesso" role="status" hidden>
+        <h2>Login feito com sucesso!</h2>
+        <button type="button" class="btn-link" id="btnSair">Sair</button>
+      </div>
     </section>
   </main>
- 
+  <footer class="site-footer">
+    <section class="sobre-clone">
+      <h2>Sobre este Trabalho</h2>
+      <p>
+        Reprodução educacional da tela de login da Netflix, feita como trabalho
+        G1 de Front-End, com paleta em tons de azul e login simulado em JavaScript
+      </p>
+      <p class="autor"> Desenvolvido por: Arthur Saggin e João Isaque Farias — RA: 1139361 e 1139559</p>
+    </section>
+  </footer>
+</body>
+</html>

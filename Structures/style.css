@@ -6,6 +6,7 @@
   --cor-cinza-borda: #8c8c8c;
   --cor-texto-claro: #fff;
   --cor-texto-cinza: #b3b3b3;
+  --cor-link: #0071eb;
   --fonte-principal: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --raio-borda: 4px;
 }
@@ -26,11 +27,24 @@
   padding: 0;
 }
 
+[hidden] {
+  display: none !important;
+}
+
+html {
+  -webkit-text-size-adjust: 100%; 
+}
+
 body {
   font-family: var(--fonte-principal);
   background-color: var(--cor-fundo);
   color: var(--cor-texto-claro);
   line-height: 1.5;
+}
+
+input,
+button {
+  font-family: inherit;
 }
 
 img {
@@ -42,6 +56,7 @@ a {
   color: var(--cor-texto-claro);
   text-decoration: none;
 }
+
 
 a:hover {
   text-decoration: underline;
@@ -80,6 +95,12 @@ a:hover {
   text-align: left;
 }
 
+#login-title {
+  font-size: 1.75rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
 .login-box > p {
   color: var(--cor-texto-cinza);
   margin-bottom: 1.5rem;
@@ -91,12 +112,12 @@ a:hover {
 
 .form-group input {
   width: 100%;
-  padding: 1.5rem;
+  padding: 1.5rem 0.9rem 0.6rem; 
   background-color: var(--cor-cinza-input);
   border: 1px solid var(--cor-cinza-input);
   border-radius: var(--raio-borda);
   color: var(--cor-texto-claro);
-  font-size: 1rem;
+  font-size: 1rem; 
 }
 
 .form-group label {
@@ -115,16 +136,38 @@ a:hover {
   box-shadow: 0 0 0 1px var(--cor-texto-claro);
 }
 
+.form-group input[aria-invalid="true"] {
+  border-color: #ffb800;
+}
+
 .error-message {
   display: block;
   color: #ffb800;
   font-size: 0.8rem;
   margin-top: 0.3rem;
   min-height: 1rem;
+  text-align: left;
+}
+
+
+.etapa-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--cor-texto-cinza);
+  text-align: left;
+}
+
+.etapa-info span {
+  overflow-wrap: anywhere;
 }
 
 .btn-entrar {
   width: 100%;
+  min-height: 3rem; 
   padding: 0.9rem;
   border: none;
   border-radius: var(--raio-borda);
@@ -135,27 +178,31 @@ a:hover {
   color: var(--cor-texto-claro);
 }
 
-.btn-entrar:hover {
+.btn-entrar:hover,
+.btn-entrar:active {
   background-color: var(--cor-azul-hover);
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--cor-link);
+  cursor: pointer;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
 }
 
 .ajuda-link {
   display: block;
   margin-top: 1rem;
+  padding: 0.25rem 0;
   font-size: 0.85rem;
   color: var(--cor-texto-cinza);
   text-align: left;
-}
-
-.signup-text {
-  margin-top: 1.2rem;
-  font-size: 0.9rem;
-  color: var(--cor-texto-cinza);
-}
-
-.signup-text a {
-  color: var(--cor-texto-claro);
-  font-weight: bold;
 }
 
 .recaptcha-text {
@@ -165,8 +212,44 @@ a:hover {
 }
 
 .recaptcha-text a {
-  color: #0071eb;
+  color: var(--cor-link);
 }
+
+
+.sucesso {
+  padding: 3rem 0;
+}
+
+.sucesso h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+
+.site-footer {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-cinza);
+  padding: 1.5rem 1rem;
+}
+
+.sobre-clone {
+  max-width: 950px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--cor-cinza-input);
+  font-size: 0.85rem;
+}
+
+.sobre-clone h2 {
+  font-size: 1rem;
+  color: var(--cor-texto-claro);
+  margin-bottom: 0.5rem;
+}
+
+.sobre-clone .autor {
+  margin-top: 0.5rem;
+}
+
 
 @media (min-width: 768px) {
   .site-header {
@@ -175,10 +258,13 @@ a:hover {
 
   .login-main {
     padding: 3rem 5rem;
-    
   }
 
   #login-title {
     font-size: 2.25rem;
+  }
+
+  .site-footer {
+    padding: 2rem 3rem;
   }
 }
